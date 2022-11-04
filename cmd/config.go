@@ -14,12 +14,12 @@ const (
 	configFilePath                       = "./config.yaml"
 	slashingPeriodUptimeWarningThreshold = 99.80 // 20 of the last 10,000 blocks missed
 	slashingPeriodUptimeErrorThreshold   = 98    // 200 of the last 10,000 blocks missed
-	recentBlocksToCheck                  = 20
+	recentBlocksToCheck                  = 100
 	notifyEvery                          = 20 // check runs every ~30 seconds, so will notify for continued errors and rollup stats every ~10 mins
-	recentMissedBlocksNotifyThreshold    = 10
-	sentryGRPCErrorNotifyThreshold       = 1 // will notify with error for any more than this number of consecutive grpc errors for a given sentry
-	sentryOutOfSyncErrorNotifyThreshold  = 1 // will notify with error for any more than this number of consecutive out of sync errors for a given sentry
-	sentryHaltErrorNotifyThreshold       = 1 // will notify with error for any more than this number of consecutive halt errors for a given sentry
+	recentMissedBlocksNotifyThreshold    = 50
+	sentryGRPCErrorNotifyThreshold       = 5 // will notify with error for any more than this number of consecutive grpc errors for a given sentry
+	sentryOutOfSyncErrorNotifyThreshold  = 5 // will notify with error for any more than this number of consecutive out of sync errors for a given sentry
+	sentryHaltErrorNotifyThreshold       = 5 // will notify with error for any more than this number of consecutive halt errors for a given sentry
 )
 
 type AlertLevel int8
