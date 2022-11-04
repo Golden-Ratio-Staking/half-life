@@ -15,8 +15,8 @@ import (
 )
 
 const (
-	sentryGRPCTimeoutSeconds = 5
-	RPCTimeoutSeconds        = 5
+	sentryGRPCTimeoutSeconds = 10
+	RPCTimeoutSeconds        = 10
 )
 
 func newClient(addr string) (rpcclient.Client, error) {
